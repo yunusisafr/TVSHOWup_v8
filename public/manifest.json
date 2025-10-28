@@ -1,0 +1,55 @@
+{
+  "name": "TVShowUp - Movie & TV Show Discovery",
+  "short_name": "TVShowUp",
+  "description": "Discover your next favorite movie or TV show with intelligent recommendations",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/tvshowup_logo-01.png",
+      "sizes": "434x116",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["entertainment", "lifestyle"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Discover",
+      "short_name": "Discover",
+      "description": "Start discovering content",
+      "url": "/?action=discover",
+      "icons": [
+        {
+          "src": "/tvshowup_logo-01.png",
+          "sizes": "434x116"
+        }
+      ]
+    },
+    {
+      "name": "My Lists",
+      "short_name": "Lists",
+      "description": "View your watchlists",
+      "url": "/my-lists",
+      "icons": [
+        {
+          "src": "/tvshowup_logo-01.png",
+          "sizes": "434x116"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

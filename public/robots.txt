@@ -1,0 +1,48 @@
+# robots.txt for TVSHOWup
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.tvshowup.com/sitemap.xml
+
+# Allow all language versions (20 languages)
+Allow: /en/
+Allow: /tr/
+Allow: /de/
+Allow: /fr/
+Allow: /es/
+Allow: /it/
+Allow: /pt/
+Allow: /ru/
+Allow: /ja/
+Allow: /ko/
+Allow: /zh/
+Allow: /ar/
+Allow: /hi/
+Allow: /nl/
+Allow: /sv/
+Allow: /no/
+Allow: /da/
+Allow: /fi/
+Allow: /pl/
+Allow: /el/
+
+# Allow content pages
+Allow: /movie/
+Allow: /tv_show/
+Allow: /person/
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /settings/
+Disallow: /watchlist/
+Disallow: /my-lists/
+
+# Disallow API endpoints
+Disallow: /api/
+
+# Allow search
+Allow: /search
+
+# Crawl-delay (optional, adjust if needed)
+Crawl-delay: 1
