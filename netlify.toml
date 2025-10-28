@@ -1,0 +1,227 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "https://ycojglkexgpbrxcilkkm.supabase.co/functions/v1/generate-sitemap"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ads.txt"
+  to = "/ads.txt"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/reset-password"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/manifest.json"
+  to = "/manifest.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/.well-known/*"
+  to = "/.well-known/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sw.js"
+  to = "/sw.js"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://admin.tvshowup.com/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/"
+  to = "/tr"
+  status = 302
+  force = false
+  conditions = {Language = ["tr"]}
+
+[[redirects]]
+  from = "/"
+  to = "/de"
+  status = 302
+  force = false
+  conditions = {Language = ["de"]}
+
+[[redirects]]
+  from = "/"
+  to = "/fr"
+  status = 302
+  force = false
+  conditions = {Language = ["fr"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es"
+  status = 302
+  force = false
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/"
+  to = "/it"
+  status = 302
+  force = false
+  conditions = {Language = ["it"]}
+
+[[redirects]]
+  from = "/"
+  to = "/pt"
+  status = 302
+  force = false
+  conditions = {Language = ["pt"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ru"
+  status = 302
+  force = false
+  conditions = {Language = ["ru"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ja"
+  status = 302
+  force = false
+  conditions = {Language = ["ja"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ko"
+  status = 302
+  force = false
+  conditions = {Language = ["ko"]}
+
+[[redirects]]
+  from = "/"
+  to = "/zh"
+  status = 302
+  force = false
+  conditions = {Language = ["zh"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ar"
+  status = 302
+  force = false
+  conditions = {Language = ["ar"]}
+
+[[redirects]]
+  from = "/"
+  to = "/hi"
+  status = 302
+  force = false
+  conditions = {Language = ["hi"]}
+
+[[redirects]]
+  from = "/"
+  to = "/nl"
+  status = 302
+  force = false
+  conditions = {Language = ["nl"]}
+
+[[redirects]]
+  from = "/"
+  to = "/sv"
+  status = 302
+  force = false
+  conditions = {Language = ["sv"]}
+
+[[redirects]]
+  from = "/"
+  to = "/no"
+  status = 302
+  force = false
+  conditions = {Language = ["no"]}
+
+[[redirects]]
+  from = "/"
+  to = "/da"
+  status = 302
+  force = false
+  conditions = {Language = ["da"]}
+
+[[redirects]]
+  from = "/"
+  to = "/fi"
+  status = 302
+  force = false
+  conditions = {Language = ["fi"]}
+
+[[redirects]]
+  from = "/"
+  to = "/pl"
+  status = 302
+  force = false
+  conditions = {Language = ["pl"]}
+
+[[redirects]]
+  from = "/"
+  to = "/el"
+  status = 302
+  force = false
+  conditions = {Language = ["el"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+  force = false
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
